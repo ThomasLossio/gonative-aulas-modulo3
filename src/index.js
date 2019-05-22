@@ -5,11 +5,12 @@ import { Provider } from 'react-redux';
 
 import store from './store';
 
-import TodoList from './TodoList';
+import Routes from './routes';
+import { setNavigator } from './services/navigation';
 
 const App = () => (
   <Provider store={store}>
-    <TodoList />
+    <Routes ref={setNavigator} />
   </Provider>
 );
 
